@@ -10,6 +10,7 @@ public class Rotated_binary_search {
         
         int target = in.nextInt();
         System.out.println(search(arr, target));
+        in.close();
     }
     static int search(int arr[], int target ){
         int pivot = findpivot(arr);
