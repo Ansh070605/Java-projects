@@ -1,12 +1,19 @@
+import java.util.Scanner;
+
 public class Rotated_binary_search {
     public static void main(String[] args) {
-        int[] arr = {4,5,6,7,0,1,2,3};
-        int target = 4;
+        Scanner in = new Scanner(System.in);
+        int[] arr = new int[8];
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = in.nextInt();
+        }
+        
+        int target = in.nextInt();
         System.out.println(search(arr, target));
     }
     static int search(int arr[], int target ){
         int pivot = findpivot(arr);
-        if(arr[pivot] == -1){
+        if(pivot == -1){
             return binarysearch(arr, target, 0, arr.length - 1);
         }
         if(arr[pivot] == target){
